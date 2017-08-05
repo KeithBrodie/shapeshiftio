@@ -4,13 +4,6 @@ Python API for https://shapeshift.io
 Install
 =====
 
-### Using `pip`
-
-```
-$ pip install shapeshiftio
-```
-
-
 ### Build from source
 
 ```
