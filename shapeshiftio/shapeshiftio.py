@@ -173,7 +173,7 @@ class ShapeShiftIO:
         return self.get_request(self.url)
 
     def tx_by_apikey(self, apiKey):
-	"""
+        """
 	Allows vendors to get a list of all transactions that have ever been done using a specific API key. Transactions are created with an affilliate PUBLIC KEY, but they are looked up using the linked PRIVATE KEY, to protect the privacy of our affiliates' account details. 
 
         [apiKey] is the affiliate's PRIVATE api key.
