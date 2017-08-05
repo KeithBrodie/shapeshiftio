@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='shapeshiftio',
-        version='1.0.0',
+        version='1.0.1',
         description='Python API for https://shapeshift.io',
         url='https://github.com/KeithBrodie/shapeshiftio',
         author='Another Bit Fan',
