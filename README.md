@@ -14,7 +14,7 @@ $ pip install shapeshiftio
 ### Build from source
 
 ```
-$ git clone https://github.com/abitfan/shapeshiftio
+$ git clone https://github.com/KeithBrodie/shapeshiftio
 $ cd shapeshiftio
 $ python setup.py install
 ```
