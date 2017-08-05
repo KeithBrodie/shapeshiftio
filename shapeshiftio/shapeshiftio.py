@@ -251,7 +251,7 @@ class ShapeShiftIO:
         return self.get_request(self.url)
 
     def shift(self, postdata):
-	"""
+        """
 	This is the primary data input into ShapeShift. 
 
         data required:
@@ -279,7 +279,7 @@ class ShapeShiftIO:
         return self.post_request(self.url, params=postdata)
 
     def set_mail(self, postdata):
-	"""
+        """
 	This call requests a receipt for a transaction. The email address will be added to the conduit associated with that transaction as well. (Soon it will also send receipts to subsequent transactions on that conduit) 
 
         data required:
@@ -299,7 +299,7 @@ class ShapeShiftIO:
         return self.post_request(self.url, postdata)
 
     def send_amount(self, postdata):
-	"""
+        """
 	This call allows you to request a fixed amount to be sent to the withdrawal address. You provide a withdrawal address and the amount you want sent to it. We return the amount to deposit and the address to deposit to. This allows you to use shapeshift as a payment mechanism. This call also allows you to request a quoted price on the amount of a transaction without a withdrawal address.
 	//1. Send amount request
  
@@ -368,7 +368,7 @@ class ShapeShiftIO:
         return self.post_request(self.url, postdata)
 
     def cancel_pending(self, postdata):
-	"""
+        """
 	This call allows you to request for canceling a pending transaction by the deposit address. If there is fund sent to the deposit address, this pending transaction cannot be canceled.
 
         data required: address  = The deposit address associated with the pending transaction
@@ -382,6 +382,6 @@ class ShapeShiftIO:
         Error Output:
 
          {  error  : {errorMessage}  }
-	"""
+        """
         self.url = self.baseurl + "/cancelpending"
         return self.post_request(self.url, postdata)
