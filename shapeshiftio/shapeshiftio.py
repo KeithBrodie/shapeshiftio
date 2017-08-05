@@ -1,9 +1,7 @@
 #!/usr/bin/python
 
-import urllib
-import urllib2
+import requests
 import json
-
 
 
 class ShapeShiftIO:
@@ -16,13 +14,12 @@ class ShapeShiftIO:
 
     def get_request(self, url):
 
-        ret = urllib2.urlopen(urllib2.Request(url))
-        return json.loads(ret.read())
+        response = requests.get(url = url)
+        return json.loads(response.text)
 
     def post_request(self, url, postdata):
-        ret = urllib2.urlopen(urllib2.Request(url, urllib.urlencode(postdata)))
-        return json.loads(ret.read())
-
+        ret = requests.post(url, data=params)
+        return json.loads(ret.text)
 
     def rate(self, pair):
         """
@@ -279,7 +276,7 @@ class ShapeShiftIO:
             }   
         """
         self.url = self.baseurl + "/shift"
-        return self.post_request(self.url, postdata)
+        return self.post_request(self.url, params=postdata)
 
     def set_mail(self, postdata):
 	"""
